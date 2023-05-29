@@ -1,0 +1,43 @@
+{
+  "name": "node-typescript-starter-project",
+  "version": "0.0.1",
+  "description": "Starter TypeScript, node express project written as guide to cntechy blog",
+  "author": {
+    "name": "Santhosh Sasidharan",
+    "email": "contact@cntechy.com",
+    "url": "https://cntechy.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "dev": "nodemon"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "express"
+  ],
+  "license": "GNU General Public Licence v3.0",
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.4",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.2.5",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": ".ts,.js",
+    "ignore": [
+      "test/*",
+      "docs/*"
+    ],
+    "exec": "ts-node ./src/index.ts"
+  }
+}
