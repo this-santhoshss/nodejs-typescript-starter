@@ -17,7 +17,6 @@
     ],
     "overrides": [],
     "rules": {
-        "no-console": ["error", { "allow": ["error"] }],
-        "quotes": [ "error", "single" ]
+        "no-console": ["error", { "allow": ["error"] }]
     }
 }
