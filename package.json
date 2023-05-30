@@ -11,7 +11,8 @@
   "scripts": {
     "start": "node build/index.js",
     "dev": "nodemon",
-    "lint": "eslint --ext .js,.ts ."
+    "lint": "eslint --ext .js,.ts .",
+    "prepare": "husky install" 
   },
   "keywords": [
     "nodejs",
@@ -26,6 +27,8 @@
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@typescript-eslint/parser": "^5.59.7",
     "eslint": "^8.41.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "nodemon": "^2.0.22",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
@@ -43,5 +46,9 @@
       "docs/*"
     ],
     "exec": "ts-node ./src/index.ts"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --fix",
+    "*.js": "eslint --fix"
   }
 }
